@@ -32,6 +32,23 @@ dofile(vim.g.base46_cache .. "statusline")
 require "options"
 require "nvchad.autocmds"
 
+------------------------
+-- Modified StatusLine
+------------------------
+local function statusline_add_row_col()
+  local config = require "nvconfig"
+
+  if config.ui.statusline.enabled then
+    vim.o.statusline = "%!v:lua.require('configs.statusline-cursor')()"
+  end
+end
+
+statusline_add_row_col()
+------------------------
+-- /Modified StatusLine
+------------------------
+
+
 vim.schedule(function()
   require "mappings"
 end)

@@ -32,4 +32,10 @@ return {
       auto_install = true
     },
   },
+
+  {
+    "meznaric/key-analyzer.nvim",
+    lazy = false,
+    opts = {}
+  },
 }

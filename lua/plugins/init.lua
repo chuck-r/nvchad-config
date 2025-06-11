@@ -38,4 +38,7 @@ return {
     lazy = false,
     opts = {}
   },
+
+  -- test new blink
+  { import = "nvchad.blink.lazyspec" },
 }
